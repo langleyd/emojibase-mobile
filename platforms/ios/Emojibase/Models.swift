@@ -20,6 +20,7 @@ public struct Emoji: Codable {
     public  let label: String
     let order: Int?
     public let tags: [String]?
+    public let shortcodes: [String]
     public let unicode: String
     public let skins: [EmojiSkin]?
 }
