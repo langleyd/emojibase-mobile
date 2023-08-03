@@ -1,5 +1,5 @@
 import XCTest
-@testable import emojibase_mobile
+@testable import Emojibase
 
 final class emojibase_mobileTests: XCTestCase {
     func testExample() async throws {

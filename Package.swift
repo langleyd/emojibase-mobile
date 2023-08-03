@@ -4,25 +4,25 @@
 import PackageDescription
 
 let package = Package(
-    name: "emojibase-mobile",
+    name: "Emojibase",
     platforms: [
          .iOS(.v16),
      ],
     products: [
         .library(
-            name: "emojibase-mobile",
-            targets: ["emojibase-mobile"]),
+            name: "Emojibase",
+            targets: ["Emojibase"]),
     ],
     targets: [
         .target(
-            name: "emojibase-mobile",
-            path: "platforms/ios/emojibase-mobile",
+            name: "Emojibase",
+            path: "platforms/ios/Emojibase",
             resources: [.process("Resources")]
         ),
         .testTarget(
-            name: "emojibase-mobileTests",
-            dependencies: ["emojibase-mobile"],
-            path: "platforms/ios/emojibase-mobileTests"
+            name: "EmojibaseTests",
+            dependencies: ["Emojibase"],
+            path: "platforms/ios/EmojibaseTests"
         ),
     ]
 )
