@@ -5,6 +5,8 @@ public struct EmojibaseDatasource {
         Bundle.module.url(forResource: "emojibase", withExtension: "json")
     }
     
+    public init() {}
+    
     public func load() async throws -> EmojibaseStore {
         guard let jsonDataURL = Self.jsonFile else {
             throw DatasourceError.fileNotFound
