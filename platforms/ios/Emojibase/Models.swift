@@ -1,11 +1,11 @@
 import Foundation
 
-struct EmojibaseStore {
+public struct EmojibaseStore {
     var categories: [String: [Emoji]]
 }
 
-extension EmojibaseStore {
-    func emojisFor(category: Category) -> [Emoji]? {
+public extension EmojibaseStore {
+    func emojisFor(category: EmojibaseCategory) -> [Emoji]? {
         return categories[category.rawValue]
     }
     
@@ -14,7 +14,7 @@ extension EmojibaseStore {
     }
 }
 
-struct Emoji: Codable {
+public struct Emoji: Codable {
     let group: Int?
     let hexcode: String
     let label: String
@@ -24,7 +24,7 @@ struct Emoji: Codable {
     let skins: [EmojiSkin]?
 }
 
-struct EmojiSkin: Codable {
+public struct EmojiSkin: Codable {
     let group: Int
     let hexcode: String
     let label: String
@@ -32,7 +32,7 @@ struct EmojiSkin: Codable {
     let unicode: String
 }
 
-enum Category: String, Codable, CaseIterable {
+public enum EmojibaseCategory: String, Codable, CaseIterable {
     case people
 //
 //    case control

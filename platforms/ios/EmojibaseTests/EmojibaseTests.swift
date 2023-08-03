@@ -5,7 +5,7 @@ final class emojibase_mobileTests: XCTestCase {
     func testExample() async throws {
         let data = try? await EmojibaseDatasource().load()
         let store = try XCTUnwrap(data)
-        XCTAssertEqual(store.categories.count, Category.allCases.count)
+        XCTAssertEqual(store.categories.count, EmojibaseCategory.allCases.count)
         let people = try XCTUnwrap(store.emojisFor(category: .people))
         let emoji = try XCTUnwrap(people.first(where: { $0.label == "OK hand" }))
         let tags = try XCTUnwrap(emoji.tags)

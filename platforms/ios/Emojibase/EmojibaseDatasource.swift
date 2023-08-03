@@ -1,11 +1,11 @@
 import Foundation
 
-struct EmojibaseDatasource {
+public struct EmojibaseDatasource {
     private static var jsonFile: URL? {
         Bundle.module.url(forResource: "emojibase", withExtension: "json")
     }
     
-    func load() async throws -> EmojibaseStore {
+    public func load() async throws -> EmojibaseStore {
         guard let jsonDataURL = Self.jsonFile else {
             throw DatasourceError.fileNotFound
         }
