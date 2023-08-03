@@ -16,10 +16,13 @@ let package = Package(
     targets: [
         .target(
             name: "emojibase-mobile",
+            path: "platforms/ios/emojibase-mobile",
             resources: [.process("Resources")]
         ),
         .testTarget(
             name: "emojibase-mobileTests",
-            dependencies: ["emojibase-mobile"]),
+            dependencies: ["emojibase-mobile"],
+            path: "platforms/ios/emojibase-mobileTests"
+        ),
     ]
 )
