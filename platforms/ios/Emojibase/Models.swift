@@ -35,12 +35,10 @@ public struct EmojiSkin: Codable {
 
 public enum EmojibaseCategory: String, Codable, CaseIterable {
     case people
-//
-//    case control
     case nature
     case foods
-    case places
     case activity
+    case places
     case objects
     case symbols
     case flags
