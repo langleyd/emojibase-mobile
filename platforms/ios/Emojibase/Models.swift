@@ -1,7 +1,7 @@
 import Foundation
 
 public struct EmojibaseStore {
-    var categories: [String: [Emoji]]
+    public var categories: [String: [Emoji]]
 }
 
 public extension EmojibaseStore {
@@ -16,20 +16,20 @@ public extension EmojibaseStore {
 
 public struct Emoji: Codable {
     let group: Int?
-    let hexcode: String
-    let label: String
+    public  let hexcode: String
+    public  let label: String
     let order: Int?
-    let tags: [String]?
-    let unicode: String
-    let skins: [EmojiSkin]?
+    public let tags: [String]?
+    public let unicode: String
+    public let skins: [EmojiSkin]?
 }
 
 public struct EmojiSkin: Codable {
     let group: Int
-    let hexcode: String
-    let label: String
+    public let hexcode: String
+    public let label: String
     let order: Int
-    let unicode: String
+    public let unicode: String
 }
 
 public enum EmojibaseCategory: String, Codable, CaseIterable {
